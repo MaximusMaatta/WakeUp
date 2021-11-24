@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="homeStyle.css">
+<script src="script.js" defer></script>
+<title>Wake up!</title>
+</head>
+<body onload="loadDefaultAudio()">
+    
+  <div class="images">
+  <!-- An empty overlay class to put an overlay over the background image-->
+  <div class="overlay"></div>
+  <!-- A div for all of our content/prompts -->
+  <!-- A label tag defines a label for several elements -->
+
+  <div id = "myMessage">
+    
+  </div>
+  <div id="showMe">
+    <h1>Good morning!</h1>
+    <p><em>Click the sun</em></p>
+  </div>
+
+  <button class="sun" ></button>
+  <audio id="myAudio"></audio>
+
+  <div class="sidebarmenu">
+    <p id="intro">Hi there! If you have come to this page, it’s probably because you struggle getting out of bed in the morning. This page is meant to help you with this problem through some guided steps. 
+      <br><br>If you never return to here again, we hope it’s because we have accomplished what we set out to do-  helping you wake up!
+    </p>
+    <p id="intro2">Here’s how it works:</p>
+      <p id="one">SUN</p>
+    <p id="two">
+      Our sleep and wake-cycle is regulated by the circadian rythm, an internal clock in our biology which is triggered by the appearence of light. The sunrise simulation on this page is thought to help you activate those cells to wake you up.
+    </p>
+    <p id="link1">
+      <br>
+      <a
+        href="https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx"
+        >Read more here!</a
+      >
+    </p>
+    <p id="three">WATER</p>
+    <p id="four">
+      There is a correlation between dehydration and energy levels in the body. Since you loose fluids during sleep, a way to combat drowzyness is to hydrate first thing in the morning. 
+    </p>
+    <p id="five">
+      Pro tip: Set yourself up for sucess by having a glass of water by your bedside the day before. 
+    </p>
+    <p id="link2">
+      <br>
+      <a
+        href="https://academic.oup.com/sleep/article/42/2/zsy210/5155420?login=true"
+        >Read more here</a
+      >
+      and
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4273450/"
+        >here!</a
+      >
+    </p>
+    <p id="six">OXYGEN</p>
+    <p id="seven">
+      Fresh oxygen helps regulate the circulatory system of the body. When breathing deep, you provide the brain with oxygen which can help increase a sense of alertness.
+    </p>
+    <p id="link3">
+      <br>
+      <a href="https://www.nacd.org/my-brain-needs-oxygen-what-can-i-do/"
+        >Read more here!</a
+      >
+    </p>
+    <p id="eight">STRETCH</p>
+    <p id="nine">Just like breathing, moving your body also helps the circulatory system. A simple stretch first thing in the morning can therefore help you to wake up.</p>
+      <p id="link4">
+        <br>
+        <a
+          href="https://www.health.harvard.edu/staying-healthy/try-these-stretches-before-you-get-out-of-bed"
+          >Read more here!</a>
+      </p>
+      <br>
+  </div>
+  <div class="container" onclick="toggleMenu(); myFunction(this);">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+</body>
+</html>

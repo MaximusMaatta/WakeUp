@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Tienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.images {
+  /*.images position is position: relative; to allow it’s “child” .overlay to be positioned correctly
+    using position: absolute; */
+  position: relative;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/images/jordan-steranka-PCBcNA0T__c-unsplash\ 1.png");
+}
+
+.overlay {
+  /* .Overlays position is position: absolute; and top, right, bottom, left is set to 0 to force it to stretch
+    over its relative parent .images */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*We use background-color in our keyframe
+    animation because we can´t transition a background-image*/
+  background-color: rgba(10, 10, 0, 0);
+  animation-name: background-sun;
+  animation-duration: 10s;
+  z-index: 0;
+}
+
+@keyframes background-sun {
+  from {
+    background-color: rgba(2, 1, 22, 0.9);
+  }
+  to {
+    background-color: rgba(10, 10, 0, 0);
+  }
+}
+
+/* An id to make changes to the textboxes */
+#myMessage {
+  /* The “z-index” element tells the content div it should be positioned above everything else, see https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
+  color: #704300;
+  text-align: center;
+  z-index: 100;
+  font-family: "playfair Display";
+  margin-top: -12%;
+}
+
+.disappear {
+  display: none;
+}
+
+/* Upper textmessage */
+#myMessage h2 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  font-family: "Playfair Display";
+}
+
+/* Lower textmessage */
+#myMessage h4 {
+  font-weight: lighter;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  font-family: "Playfair Display";
+}
+
+/* Code that creates the sun */
+.sun {
+  position: absolute;
+  bottom: 650px;
+  height: 100px;
+  width: 100px;
+  /*background-color: rgba(247, 222, 135, 1);*/
+  background-color: #f8eaae;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px 40px #efcc87;
+  border: none;
+  animation-name: sun;
+  animation-duration: 10s;
+}
+
+.sun:hover {
+  background-color: #fadd5c;
+  cursor: pointer;
+}
+
+@keyframes sun {
+  from {
+    background-color: rgba(19, 17, 44, 2);
+    box-shadow: 0px 0px 40px 40px rgba(19, 17, 44, 2);
+    bottom: 50px;
+  }
+  to {
+    /*background-color: rgba(247, 222, 135, 2);*/
+    background-color: #f8eaae;
+    box-shadow: 0px 0px 40px 40px #efcc87;
+    bottom: 650px;
+  }
+}
+
+/* An animation that fades in the welcome phrase while the sun rises */
+#showMe {
+  text-align: center;
+  margin-top: 21%;
+  margin-bottom: 250px;
+  color: #704300;
+  font-size: 30px;
+  z-index: 100;
+  opacity: 0.9;
+  animation-name: cssAnimation;
+  animation-duration: 10s;
+  font-family: "playfair Display";
+}
+
+#showMe p {
+  margin-top: 6%;
+  margin-bottom: 250px;
+  text-align: center;
+  color: #704300;
+  font-size: 17px;
+  z-index: 100;
+  opacity: 0.9;
+  animation-name: cssAnimation;
+  animation-duration: 10s;
+  font-family: "playfair Display";
+}
+
+@keyframes cssAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+p {
+  font-family: "Arimo";
+  letter-spacing: 1.5px;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 15%;
+  margin-top: 30%;
+  line-height: 1;
+}
+
+#intro {
+  font-weight: normal;
+  margin-top: 35%;
+  line-height: 1.2;
+}
+
+#intro2 {
+  font-weight: normal;
+  margin-top: 1%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#one {
+  font-weight: 700;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 3px;
+}
+
+#two {
+  font-weight: normal;
+  margin-top: 2%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#link1 {
+  margin-top: 0;
+}
+
+#three {
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+#four {
+  font-weight: normal;
+  margin-top: 2%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#five {
+  font-weight: normal;
+  margin-top: 3%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#link2 {
+  margin-top: 0;
+}
+
+#six {
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+#seven {
+  font-weight: normal;
+  margin-top: 2%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#link3 {
+  margin-top: 0;
+}
+
+#eight {
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+#nine {
+  font-weight: normal;
+  margin-top: 2%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#link4 {
+  margin-top: 0;
+}
+
+/* takes away the blue color from the links */
+a {
+  color: inherit;
+}
+
+.sidebarmenu {
+  position: absolute;
+  margin: -2%;
+  width: 1px;
+  height: 820px;
+  left: 0;
+  background: rgba(83, 75, 99, 0.4);
+  transition: 0.5s;
+  position: left;
+  overflow-y: auto;
+  top: 0px;
+}
+
+.sidebarmenu.active {
+  width: 350px;
+}
+
+.container,
+.container.active {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 27px;
+  height: 3px;
+  background-color: #704300;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.container.active {
+  content: "\f00d";
+}
+
+.far {
+  font-size: 13px;
+  margin-top: 20px;
+  margin-left: 50%;
+}
